@@ -7,12 +7,20 @@ let shopSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    phoneNumber:{
+        type: Number,
+        minlength: 10,
+        maxlength: 12
+    },
     email:{
         type:String,
-        required:true
+        required:true,
+        match: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+
     },
     message:{
         type:String,
+        maxlength: 100
     }
 })
 
