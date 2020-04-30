@@ -11,7 +11,6 @@ const workSchema = mongoose.Schema({
     description: String,
     //ageGroup: ,
     BMI: Number,
-    group: Number,
     level: Number,
     goal: String
 
